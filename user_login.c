@@ -4,9 +4,7 @@
 #include <windows.h>
 #include "task_manager.c" 
 #include "office_suite.c"
-  // import office suite
-
-
+#include "calender.c"
 #define ENTER 13
 #define TAB 9
 #define BCKSPC 8
@@ -168,8 +166,7 @@ void taskMenu(char username[]){
     printf("\n1. Task Manager");
     printf("\n2. Office Suite");
     printf("\n3. Calender");
-    printf("\n4. Notes");
-    printf("\n5. View User Info");
+    printf("\n4. View User Info");
 
 
     printf("\n\nYour choice:\t");
@@ -182,6 +179,10 @@ void taskMenu(char username[]){
 
         case 2:
             officeSuitMenu();
+            break;
+
+        case 3:
+            calenderMenu(username);
             break;
 
         default:
