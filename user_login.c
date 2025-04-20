@@ -2,7 +2,10 @@
 #include <string.h>
 #include <conio.h>
 #include <windows.h>
-#include "task_manager.c" //check
+#include "task_manager.c" 
+#include "office_suite.c"
+  // import office suite
+
 
 #define ENTER 13
 #define TAB 9
@@ -163,18 +166,29 @@ void taskMenu(char username[]){
     printf("\n\t\t\t\t\t\tWelcome %s", username);
     printf("\nChoose an operation:\t");
     printf("\n1. Task Manager");
-    printf("\n2. Notes");
+    printf("\n2. Office Suite");
     printf("\n3. Calender");
-    printf("\n4. View User Info");
+    printf("\n4. Notes");
+    printf("\n5. View User Info");
+
 
     printf("\n\nYour choice:\t");
     scanf("%d", &choice);
 
     switch(choice){
         case 1:
-        taskManagerMenu(username);
-        break;
+            taskManagerMenu(username);
+            break;
 
+        case 2:
+            officeSuitMenu();
+            break;
+
+        default:
+            printf("Invalid choice. Please try again.\n");
+            break;
+
+        //add case here!!!!
     }
 
 

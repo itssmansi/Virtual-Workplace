@@ -2,10 +2,12 @@
 #include <string.h>
 #include <ctype.h> // for isspace function
 #include <stdlib.h>
+//#include "task_manager.h"
 
-void viewTask(char userName[]);
 void addTask(char userName[]);
+void viewTask(char userName[]);
 void deleteTask(char userName[]);
+void taskManagerMenu(char userName[]); 
 
 struct task {
     char description[200];
@@ -215,9 +217,7 @@ void deleteTask(char userName[]){
     free(tasks);
 
 }
-
-
-void taskManagerMenu(char userName[]);
+ 
 // Task Manager Menu
 void taskManagerMenu(char userName[]){
     int taskChoice = 0;
