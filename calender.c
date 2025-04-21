@@ -137,7 +137,7 @@ void setDeadline(){
 
 void viewCalender(){
     printf("Opening Windows Calendar...\n");
-    system("start outlookcal:");
+    system("start https://calendar.google.com");
 }
 
 void calenderMenu(char userName[]){
@@ -147,12 +147,10 @@ void calenderMenu(char userName[]){
     printf("\n--- Calendar Menu ---");
 
     do{
-    printf("1. View Month\n");
-    printf("2. Schedule Meeting\n");
-    printf("3. Set Deadline\n");
-    printf("4. Set Reminder\n");
-    printf("5. View calender\n");
-    printf("6. Back to Main Menu\n");
+    printf("\n1. Schedule Meeting\n");
+    printf("2. Set Deadline\n");
+    printf("3. View calender\n");
+    printf("4. Back to Main Menu\n");
     printf("Enter your choice: ");
     
 
@@ -168,18 +166,10 @@ void calenderMenu(char userName[]){
             break;
 
         case 3:
-            printf("Developing....");
-            break;
-
-        case 4:
-            printf("Developing....");
-            break;
-
-        case 5:
             viewCalender();
             break;
 
-        case 6:
+        case 4:
             return;
         
         default:
